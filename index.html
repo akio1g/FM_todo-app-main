@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | Todo app</title>
-
+  <script defer src="app.js"></script>
 </head>
 <body>
   <header>
@@ -20,45 +20,35 @@
   <main>
     <aside>
       <input type="text" id="create-todo" placeholder="Create a new todo...">
-      <img src="images/icon-notchecked.svg" alt="icon-notchecked"><img src="images/icon-check.svg" alt="check button">
     </aside>
 
     <article>
-      <section>
-        <h2>Content of the text text text</h2>
-        <img src="images/icon-notchecked.svg" alt="icon-notchecked"><img src="images/icon-check.svg" alt="check button">
-        <img src="images/icon-cross.svg" alt="X button">
-      </section>
-      <section>
-        <h2>Content of the text text text</h2>
-        <img src="images/icon-notchecked.svg" alt="icon-notchecked"><img src="images/icon-check.svg" alt="check button">
-        <img src="images/icon-cross.svg" alt="X button">
-      </section>
-      <section>
-        <h2>Content of the text text teent of the text text textent of the text text textent of the text text textxt</h2>
-        <img src="images/icon-notchecked.svg" alt="icon-notchecked"><img src="images/icon-check.svg" alt="check button">
-        <img src="images/icon-cross.svg" alt="X button">
-      </section>
+
       <div id="article-footer">
-        <h4><span id="items-left">4</span> items left</h4>
+        <h4><span id="items-left">0</span> items left</h4>
         <div class="main-footer">
-          <a href="#" class="active">All</a>
-          <a href="#">Active</a>
-          <a href="#">Completed</a>
+          <span onclick="addSection()" class="active">All</span>
+          <span onclick="addSection('active')">Active</span>
+          <span onclick="addSection('completed')">Completed</span>
         </div>
-        <h4>Clear Completed</h4>
+        <h4 id="clear-completed" onclick="clearCompleted()">Clear Completed</h4>
       </div>
-      <section>
-        <h2>Content of the text text teent of the text text textent of the text text textent of the text text textxt</h2>
-        <img src="images/icon-notchecked.svg" alt="icon-notchecked"><img src="images/icon-check.svg" alt="check button">
-        <img src="images/icon-cross.svg" alt="X button">
-      </section>
+
     </article>
+    <div id="pop-up-edit">
+      <div>
+        <h1>Edit Content</h1>
+        <img src="images/icon-cross.svg" alt="X">
+      </div>
+      <textarea name="edit-popup" id="new-content" cols="30" rows="10"></textarea>
+      
+    </div>
   </main>
+
   <div class="main-footer">
-    <a href="#" class="active">All</a>
-    <a href="#">Active</a>
-    <a href="#">Completed</a>
+    <span onclick="addSection()" class="active">All</span>
+    <span onclick="addSection('active')">Active</span>
+    <span onclick="addSection('completed')">Completed</span>
   </div>
   
   
